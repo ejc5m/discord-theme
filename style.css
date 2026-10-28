@@ -1,0 +1,246 @@
+/* Start Direct Messages Panel */
+
+/* Bold and uppercase the Direct Messages text*/
+.privateChannelsHeaderContainer__99e7c .headerText__99e7c
+{
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+/* Remove the color change on Direct Messages text hover */
+.privateChannelsHeaderContainer__99e7c:hover
+{
+    color: var(--channels-default);
+}
+
+/* Remove the divider between tabs (Friends, Nitro, Shop, Quests) and DM's */
+[aria-label="Direct Messages"] .sectionDivider_e6b769
+{
+    background-color: unset;
+}
+
+/* Increase the font size slightly for the tab names (Friends, Nitro, Shop, Quests) */
+[aria-label="Direct Messages"] .channel__972a0:not(.dm__972a0) .link__972a0 .text-md\/medium__20a53
+{
+    font-size: 18px;
+}
+
+/* "Remove border and padding on Find or start a conversation" button" */
+[aria-label="Private channels"] .searchBar_e6b769
+{
+    border-bottom: none;
+    padding: unset;
+}
+
+/* "Make the height of the "Find or start a conversation" button its max" */
+[aria-label="Private channels"] .searchBar_e6b769 button
+{
+    border-radius: 0px;
+    height: 100%;
+    max-height:unset;
+}
+
+/* End Direct Messages Panel */
+
+/* Start really crappy titlebar modifications */
+/* TODO: comment these */
+
+.bar_c38106 .trailing_c38106 > div:not(.winButtons_c38106) svg,
+.bar_c38106 .trailing_c38106 > a svg
+{
+    width: var(--chat-input-icon-size);
+    height: var(--chat-input-icon-size);
+}
+
+.clickable__81391
+{
+    width: unset;
+}
+
+[aria-label="Channel header"]
+{
+    z-index:0;
+}
+
+/* Remove Help button */
+.trailing_c38106 .anchor__14d82
+{
+  display: none; 
+}
+
+.bar_c38106
+{
+    z-index:0;
+    top:12px;
+}
+
+.theme-light,
+.theme-dark 
+{
+  --custom-app-top-bar-height:0px !important; 
+}
+
+:root 
+{
+    --titlebar-buttons-count: 1;
+}
+:root.platform-win
+{
+    --titlebar-buttons-count: 4;
+}
+
+.tutorialContainer__1f388{
+  margin-top: 12px;
+  overflow: visible;
+}
+
+.title_c38106
+{
+    display: none;
+}
+
+.bar_c38106 
+{
+    position: fixed;
+    right: 0px;
+    z-index:3;
+}
+
+.upperContainer__9293f
+{    
+    margin-right: calc((var(--space-20) * var(--titlebar-buttons-count)) + ((var(--space-12)) * (var(--titlebar-buttons-count))));
+}
+
+.winButton_c38106 
+{
+  width:   var(--space-20) !important;
+  height: var(--space-20) !important;
+  gap: var(--space-xs);
+  border-radius:100%;
+}
+
+.winButtons_c38106
+{
+    gap: var(--space-12);
+    app-region: none !important;
+}
+
+.winButtonsWithDivider_c38106:before
+{
+    display: none;
+}
+
+.backForwardButtons__63abb
+{
+    display:none;
+}
+
+.platform-linux .bar_c38106, .platform-win .bar_c38106
+{
+    padding-inline-end: var(--space-12);
+}
+
+.channelIcon__9293f .icon__9293f
+{
+    app-region: drag !important;
+}
+
+.children__9293f::before
+{
+     app-region: drag !important;
+    content: "";
+   
+    width: 100%;
+    height: 40px;
+    position: absolute;
+}
+
+[aria-label="Open Channel Topic"] + *
+{
+    app-region: no-drag !important;
+}
+
+.trailing_c38106 [aria-label="Update Ready!"],
+.trailing_c38106 [href="https://support.discord.com"]
+{
+  display: none !important;
+}
+
+/* End really crappy titlebar modifications */
+
+/* Start user panel */
+
+/* Remove border and floating aspect */
+[aria-label="User status and settings"]
+{
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    border: unset;
+}
+
+/* Remove border radius */
+[aria-label="User status and settings"],
+[aria-label="User status and settings"] .postEnrollmentBackground__1699b,
+[aria-label="User status and settings"] .container__37e49
+{
+    border-radius: unset;
+}
+
+[aria-label="User status and settings"] .container_e131a9
+{
+    padding: unset;
+}
+
+[aria-label="User status and settings"] .container_e131a9 > :first-child
+{
+   padding: calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 4px) calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 4px) 0;
+}
+
+[aria-label="User status and settings"] .actionButtons_e131a9
+{
+    grid-gap: unset;
+}
+
+[aria-label="User status and settings"] .actionButtons_e131a9 button
+{
+    border-radius: 0px;
+    border: unset;
+    padding: 21px;
+    background-color:transparent;
+}
+
+/* End user panel */
+
+/* Start messaging box */ 
+
+.formWithLoadedChatInput_f75fb0
+{
+    padding-inline: unset;
+}
+.channelTextArea_f75fb0
+{
+    margin-bottom: unset;
+    border-radius: unset;
+}
+
+[aria-label="Send a gift"]
+{
+    display: none;
+}
+
+/* End messaging box */ 
+
+/* Start Sidebar */
+
+.sidebarList__5e434
+{
+    border-top: unset;
+}
+
+.sidebarListRounded__5e434
+{
+    border-radius: unset;
+}
+
+/* End Sidebar */
