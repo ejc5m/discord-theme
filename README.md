@@ -1,2 +1,2 @@
-# discord-theme
-My discord theme
+# My discord theme
+Only tested on Windows and Web
