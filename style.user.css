@@ -1,3 +1,16 @@
+/* ==UserStyle==
+@name           My discord theme
+@namespace      https://github.com/ejc5m
+@version        1.0.0
+@description    My discord theme for web and desktop
+@author         ejc5million
+@updateURL      https://raw.githubusercontent.com/ejc5m/discord-theme/refs/heads/main/style.user.css
+@license        MIT
+@preprocessor   default
+==/UserStyle== */
+
+@-moz-document domain("discord.com") {}
+
 /* Start Direct Messages Panel */
 
 /* Bold and uppercase the Direct Messages text*/
@@ -147,7 +160,7 @@
 
 .children__9293f::before
 {
-     app-region: drag !important;
+    app-region: drag !important;
     content: "";
    
     width: 100%;
@@ -253,13 +266,11 @@
 
 /* Start DM user profile */
 
-/* Remove user profile panel padding */
 .aside_f58343
 {
     padding: unset; 
 }
 
-/* Remove the user panels radius and padding */
 :where(.outer_c0bea0).user-profile-sidebar.user-profile-sidebar-redesign
 {
     box-shadow: unset;
@@ -272,23 +283,20 @@
     border-radius: unset;    
 }
 
-/* Remove  "View Full Profile" button padding and adjusts height */
 .redesignFooter__272c7
 {
     padding: unset;
     height: fit-content;
 }
 
-/* Increase "View Full Profile" button height and remove its radius */
 .redesignFooter__272c7 .button_a22cb0
 {
     border-radius: unset;
-    min-height: var(--custom-channel-textarea-text-area-height);
+    height: var(--custom-channel-textarea-text-area-height);
 }
 
 /* Remove decorations */
-.profileFrameLayer__7d80f,
-.profileEffects__0dd08
+.profileFrameLayer__7d80f
 {
     display: none;
 }
