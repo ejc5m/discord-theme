@@ -65,6 +65,24 @@
     height: var(--chat-input-icon-size);
 }
 
+.trailing_c38106 .iconWrapper__468db
+{
+    width:32px;
+    height:32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.trailing_c38106 .iconWrapper__468db .clickable__81391:hover [role="img"]
+{
+    color: var(--icon-subtle);
+}
+
+.trailing_c38106 .iconWrapper__468db .clickable__81391:hover
+{
+    background-color: unset;
+}
+
 .clickable__81391
 {
     width: unset;
@@ -119,17 +137,37 @@
     z-index:3;
 }
 
-.upperContainer__9293f
-{    
-    margin-right: calc((var(--space-20) * var(--titlebar-buttons-count)) + ((var(--space-12)) * (var(--titlebar-buttons-count))));
+/* i dont even know at this point */
+.visual-refresh div.chat_f75fb0:not(.threadSidebarOpen_f75fb0) .upperContainer__9293f,
+.visual-refresh main.container__133bf .upperContainer__9293f,
+.visual-refresh div.chatLayerWrapper__01ae2 .upperContainer__9293f,
+.page__5e434 .upperContainer__9293f:not(.chat_f75fb0 .upperContainer__9293f)
+{
+  margin-right: calc(calc((var(--space-32) * var(--titlebar-buttons-count)) + ((var(--space-12)) * (var(--titlebar-buttons-count)))) + 0px);
 }
 
+/* the bar in the discover panel is different i guess, and needs to manually add 8px for the padding it doesnt have */
+.headerBar__8a7fc
+{
+    padding-right:  calc(calc((var(--space-32) * var(--titlebar-buttons-count)) + ((var(--space-12)) * (var(--titlebar-buttons-count)))) + 8px);
+}
+
+[aria-label="Inbox"]
+{
+    width:fit-content;
+    height:fit-content;
+}
 .winButton_c38106 
 {
-  width:   var(--space-20) !important;
-  height: var(--space-20) !important;
+  width:   32px !important;
+  height: 32px !important;
   gap: var(--space-xs);
   border-radius:100%;
+}
+
+.chat_f75fb0[data-has-border=true] 
+{
+    border-top: unset;
 }
 
 .winButtons_c38106
@@ -179,6 +217,33 @@
   display: none !important;
 }
 
+.page__5e434
+{
+      anchor-name: --my-anchor;
+}
+
+/* Ones the titlebar in menus like settings and stuff and i want that higher so you can click it*/
+.bar_c38106
+{
+    top:0px;
+    z-index: 100000;
+}
+
+.visual-refresh {
+    & div[class*="base_"] {
+        & > div.bar_c38106 {
+            z-index: 1002;
+                position: absolute;
+    position-anchor: --my-anchor;
+    top: calc(anchor(top) + 8.5px);
+        }
+    }
+}
+
+.inviteToolbar__133bf {
+    padding-inline-end: unset;
+}
+
 /* End really crappy titlebar modifications */
 
 /* Start user panel */
@@ -200,15 +265,17 @@
     border-radius: unset;
 }
 
-[aria-label="User status and settings"] .container_e131a9
+/* The has actionButtons on this and the one below are to not apply it to Stage channels which dont have those buttons*/
+[aria-label="User status and settings"] .container_e131a9:has(.actionButtons_e131a9)
 {
     padding: unset;
 }
 
-[aria-label="User status and settings"] .container_e131a9 > :first-child
+[aria-label="User status and settings"] .container_e131a9:has(.actionButtons_e131a9) > :first-child
 {
    padding: calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 4px) calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 4px) 0;
 }
+
 
 [aria-label="User status and settings"] .actionButtons_e131a9
 {
@@ -271,7 +338,7 @@
     padding: unset; 
 }
 
-:where(.outer_c0bea0).user-profile-sidebar.user-profile-sidebar-redesign
+.user-profile-sidebar.user-profile-sidebar-redesign
 {
     box-shadow: unset;
     border-radius: unset;
@@ -292,11 +359,17 @@
 .redesignFooter__272c7 .button_a22cb0
 {
     border-radius: unset;
-    height: var(--custom-channel-textarea-text-area-height);
+    min-height: var(--custom-channel-textarea-text-area-height);
 }
 
 /* Remove decorations */
 .profileFrameLayer__7d80f
+{
+    display: none;
+}
+
+/* Remove decorations */
+.profileEffects__0dd08
 {
     display: none;
 }
