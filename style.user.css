@@ -152,6 +152,12 @@
     padding-right:  calc(calc((var(--space-32) * var(--titlebar-buttons-count)) + ((var(--space-12)) * (var(--titlebar-buttons-count)))) + 8px);
 }
 
+.searchFloating__1ac1c
+{
+    right:calc(calc((var(--space-32) * var(--titlebar-buttons-count)) + ((var(--space-12)) * (var(--titlebar-buttons-count)))) + 8px);
+
+}
+
 [aria-label="Inbox"]
 {
     width:fit-content;
