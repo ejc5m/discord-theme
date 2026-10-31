@@ -255,6 +255,12 @@
     z-index: 99999;
 }
 
+.layer__529b0 
+{
+    /* really... stupidest fix to make the tooltips and context menus work while looking at image previews and stuff */
+    z-index: 100000;
+}
+
 /* End really crappy titlebar modifications */
 
 /* Start user panel */
